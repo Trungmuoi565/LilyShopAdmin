@@ -1,0 +1,54 @@
+﻿@model Product
+<div class="container">
+    <nav class="bg-breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="/product.html">Quản lý sản phẩm</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chi tiết</li>
+        </ol>
+    </nav>
+    <div class="title-header">
+        <strong>THÔNG TIN SẢN PHẨM</strong>
+    </div>
+    <form asp-route="AdminProductEdit" method="post">
+    <div class="row product-detail">
+        <div class="col-lg-5 images-box">
+            <div class="avatar-container">
+                <div class="avatar-box">
+                    <a class="close" href="#">
+                        <i class="bi bi-x-circle"></i>
+                    </a>
+                        <a data-fancybox="gallery" href="/assets/images/products/@Model.Avatar">
+                        <img class="img-fluid img-preview" src="/assets/images/products/@Model.Avatar" />
+                    </a>
+                    <input type="file" asp-for="Avatar" class="img-upload form-control form-control-sm" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 images-change">
+            
+                <div class="input-group">
+                    <label>Mã sản phẩm:</label>
+                    <input type="text" asp-for="ProductID" />
+                </div>
+                <div class="input-group">
+                    <label>Người đăng:</label>
+                    <input type="text" asp-for="CreateBy" />
+                </div>
+                <div class="input-group">
+                    <label>Tiêu đề:</label>
+                    <input type="text" asp-for="Title"/>
+                </div>
+                <div class="input-group">
+                    <label>Giá:</label>
+                    <input type="text" asp-for="Price" />
+                </div>
+                <div class="input-group">
+                    <label>Nội dung:</label>
+                    <textarea asp-for="Content"></textarea>
+                </div>
+                <input type="submit" class="btn btn-primary save-btn" value="Lưu">
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,114 @@
+﻿@model List<Product>
+
+<div class="container">
+    <nav class="bg-breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="/product.html">Quản lý sản phẩm</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chi tiết</li>
+        </ol>
+    </nav>
+    <div class="title-header">
+        <strong>DANH SÁCH SẢN PHẨM</strong>
+    </div>
+    <a class="btn btn-addlist" asp-route="AdminProductAdd" role="button">+</a>
+    <table class="table table-bordered table-striped list-page">
+        <thead class="thead-dark">
+            <tr>
+                <th width="170">
+                    <i class="bi bi-image-fill"></i>
+                    Hình
+                </th>
+                <th>
+                    <i class="bi bi-newspaper"></i>
+                    Tiêu đề
+                </th>
+                <th>
+                    <i class="bi bi-newspaper"></i>
+                    Giá
+                </th>
+                <th>
+                    <i class="bi bi-person-circle"></i>
+                    Người đăng
+                </th>
+                <th width="120" class="text-center">
+                    <i class="bi bi-screwdriver"></i>
+                    Chức năng
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="avatar-container">
+                        <div class="avatar-box">
+                            <a class="close" href="#">
+                                <i class="bi bi-x-circle-fill"></i>
+                            </a>
+                            <a data-fancybox="gallery" href="@item.Avatar">
+                                <img class="img-fluid img-preview" src="/assets/images/products/@item.Avatar" />
+                            </a>
+                            <input type="file" class="img-upload form-control form-control-sm" />
+                        </div>
+                    </td>
+                    <td class="align-middle">
+                        <b>@item.Title</b>
+                        <br />
+                        Mã số: <b>@item.ProductID</b>
+                        <br />
+                        Thể loại: <b>Hình ảnh</b>
+                    </td>
+                    <td class="align-middle">
+                        <span>@item.Price VNĐ</span>
+                    </td>
+                    <td class="align-middle">
+                        @item.CreateBy
+                        <br />
+                        @(item.CreateTime != null ? @item.CreateTime.Value.ToString("dd/MM/yyyy") : "")
+                    </td>
+                    <td class="align-middle">
+                        <a class="btn btn-info btn-sm btn-block" asp-route="AdminProductView" asp-route-id="@item.ProductID">
+                            <i class="bi bi-eye-fill"></i>
+                            Xem
+                        </a>
+                        <a class="btn btn-primary btn-sm btn-block" asp-route="AdminProductDetail" asp-route-id="@item.ProductID">
+                            <i class="bi bi-pencil-square"></i>
+                            Sửa
+                        </a>
+                        <a class="btn btn-danger btn-sm btn-block" asp-route="AdminProductDelete" asp-route-id="@item.ProductID">
+                            <i class="bi bi-trash3-fill"></i>
+                            Xóa
+                        </a>
+                    </td>
+                </tr>
+            }
+           
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    <ul class="pagination pagination-sm justify-content-center mb-0">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">
+                                    <i class="bi bi-arrow-left-short"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">
+                                    <i class="bi bi-arrow-right-short"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

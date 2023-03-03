@@ -1,0 +1,87 @@
+﻿<div class="container">
+    <nav class="bg-breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="/product.html">Quản lý sản phẩm</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chi tiết</li>
+        </ol>
+    </nav>
+    <div class="content">
+        <div class="row sticker">
+            <div class="col-lg-3 bg-sticker">
+                <div class="border-sticker">
+                    <a asp-route="AdminHome">
+                        <i class="bi bi-house-fill"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 bg-sticker">
+                <div class="border-sticker">
+                    <a href="#">
+                        <i class="bi bi-box2"></i>
+                        <span>Kho hàng</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 bg-sticker">
+                <div class="border-sticker">
+                    <a href="#">
+                        <i class="bi bi-people-fill"></i>
+                        <span>Khách hàng</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 bg-sticker">
+                <div class="border-sticker">
+                    <a href="#">
+                        <i class="bi bi-chat-right-text-fill"></i>
+                        <span>Comment</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row dasboard-list">
+        <div class="col-lg-3 dasboard">
+            <a href="#">
+                <div class="box-img">
+                    <img src="assets/images/account.png" />
+                </div>
+                <span>TÀI KHOẢN</span>
+            </a>
+        </div>
+        <div class="col-lg-3 dasboard">
+            <a asp-route="AdminProduct">
+                <div class="box-img">
+                    <img src="assets/images/product.png" />
+                </div>
+                <span>SẢN PHẨM</span>
+            </a>
+        </div>
+        <div class="col-lg-3 dasboard">
+            <a href="#">
+                <div class="box-img">
+                    <img src="assets/images/article.png" />
+                </div>
+                <span>TIN TỨC</span>
+            </a>
+        </div>
+        <div class="col-lg-3 dasboard">
+            <a href="#">
+                <div class="box-img">
+                    <img src="assets/images/contact.png" />
+                </div>
+                <span>LIÊN HỆ</span>
+            </a>
+        </div>
+        <div class="col-lg-3 dasboard">
+            <a href="#">
+                <div class="box-img">
+                    <img src="assets/images/support.png" />
+                </div>
+                <span>HỖ TRỢ</span>
+            </a>
+        </div>
+    </div>
+</div>

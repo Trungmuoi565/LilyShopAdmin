@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+@model Account
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>LILY SHOP</title>
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="/assets/css/fontawesome.css" rel="stylesheet" />
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="/assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="/assets/css/owl.theme.default.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="background-login">
+        <div class="login-wrapper">
+            <form asp-route="AdminLogin" method="post" class="form">
+                <div class="avatar-form">
+                    <img src="/assets/images/avatar2.png" />
+                </div>
+                <h2>Đăng nhập</h2>
+                <div class="input-group">
+                    <input asp-for="Username" type="text" class="input-username" placeholder="Tên đăng nhập" />
+                </div>
+                <div class="input-group">
+                    <input asp-for="Password" type="password" class="input-password" placeholder="Mật khẩu" />
+                </div>
+                <div class="save">
+                    <input type="checkbox" class="check-btn" />
+                    <label>Lưu mật khẩu trên máy này</label>
+                </div>
+                <input type="submit" value="Đăng nhập" class="submit-btn" />
+                <a asp-route="ChangePassword">Quên mật khẩu?</a>
+                <a href="#">Đăng ký</a>
+            </form>
+        </div>
+    </div>
+    <section id="script">
+        <script src="/Scripts/popper.js"></script>
+        <script src="/Scripts/jquery-3.0.0.js"></script>
+        <script src="/Scripts/bootstrap.js"></script>
+        <script src="/Scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="/Scripts/jquery.nicescroll.js"></script>
+        <script src="/https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script src="/Scripts/owl.carousel.js"></script>
+        <script src="/Scripts/script.js"></script>
+    </section>
+</body>
+</html>

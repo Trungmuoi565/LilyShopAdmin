@@ -1,0 +1,47 @@
+﻿@model Product
+
+<div class="container">
+    <nav class="bg-breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="/product.html">Quản lý sản phẩm</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chi tiết</li>
+        </ol>
+    </nav>
+    <div class="title-header">
+        <strong>THÔNG TIN SẢN PHẨM</strong>
+    </div>
+    <div class="row product-detail">
+        <div class="col-lg-5 images-box">
+            <div class="avatar-container">
+                <div class="avatar-box">
+                    <a data-fancybox="gallery" href="/assets/images/products/@Model.Avatar">
+                        <img class="img-fluid img-preview" src="/assets/images/products/@Model.Avatar" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 images-change">
+            <div class="info-group">
+                <label>Mã sản phẩm:</label>
+                <p>@Model.ProductID</p>
+            </div>
+            <div class="info-group">
+                <label>Người đăng:</label>
+                <p>@Model.CreateBy</p>
+            </div>
+            <div class="info-group">
+                <label>Tiêu đề:</label>
+                <p>@Model.Title</p>
+            </div>
+            <div class="info-group">
+                <label>Giá:</label>
+                <p>@Model.Price vnđ</p>
+            </div>
+            <div class="info-group">
+                <label>Nội dung:</label>
+                <p>@Model.Content</p>
+            </div>
+        </div>
+    </div>
+</div>

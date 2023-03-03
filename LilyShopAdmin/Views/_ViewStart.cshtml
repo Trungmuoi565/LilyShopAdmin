@@ -1,0 +1,10 @@
+﻿@{
+    Layout = "_Layout";
+
+    if (@Context.Session.GetString("Username") == null)
+    {
+        var routeName = ViewContext.ActionDescriptor.AttributeRouteInfo.Name;
+        if (routeName != "AdminLogin")
+            Context.Response.Redirect("/admin/login");
+    }
+}

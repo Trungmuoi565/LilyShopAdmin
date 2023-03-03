@@ -1,0 +1,65 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "DBContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": "Models",
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "LilyShopAdmin",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Account]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Article]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ArticleCategory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contact]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ContactCategory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Product]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ProductCategory]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "laptop-m9tbvrtn.LilyShopAdminDB.dbo",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

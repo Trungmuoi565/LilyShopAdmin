@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>LILY SHOP - DANH SÁCH SẢN PHẨM</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/css/fontawesome.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="row navbar-top">
+            <div class="col-1 left-icon">
+                <button class="menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling">
+                    <div class="offcanvas-header">
+                        <div class="row sidebar-header">
+                            <div class="col-4 sidebar-menu">
+                                <button class="menu-button">
+                                    <i class="bi bi-list"></i>
+                                </button>
+                            </div>
+                            <div class="col-6 sidebar-logo">
+                                <div class="navbar-logo">
+                                    <a href="/">
+                                        <img src="assets/images/logo.png" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-2 button-close">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="menu-list">
+                            <a href="/">
+                                <i class="bi bi-house-heart"></i>
+                                <label>Trang chủ</label>
+                            </a>
+                        </div>
+                        <div class="menu-list">
+                            <a href="#">
+                                <i class="bi bi-person-lines-fill"></i>
+                                <label>Quản lý tài khoản</label>
+                            </a>
+                        </div>
+                        <div class="menu-list">
+                            <a href="#">
+                                <i class="bi bi-basket3"></i>
+                                <label>Quản lý sản phẩm</label>
+                            </a>
+                        </div>
+                        <div class="menu-list">
+                            <a href="#">
+                                <i class="bi bi-newspaper"></i>
+                                <label>Quản lý tin tức</label>
+                            </a>
+                        </div>
+                        <div class="menu-list">
+                            <a href="#">
+                                <i class="bi bi-file-earmark-person"></i>
+                                <label>Quản lý khách hàng</label>
+                            </a>
+                        </div>
+                        <div class="menu-list">
+                            <a href="#">
+                                <i class="bi bi-envelope-paper"></i>
+                                <label>Liên hệ</label>
+                            </a>
+                        </div>
+                        <div class="menu-list">
+                            <a href="#">
+                                <i class="bi bi-question-circle"></i>
+                                <label>Trợ giúp</label>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 left-logo">
+                <div class="navbar-logo">
+                    <a href="#">
+                        <img src="assets/images/logo.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-4 right">
+                <div class="mail">
+                    <a href="#">
+                        <i class="bi bi-envelope-heart"></i>
+                    </a>
+                </div>
+                <div class="avatar">
+                    <a class="avatar-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                        <img src="assets/images/avatar2.png" />
+                    </a>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+                        <div class="offcanvas-header">
+                            <div class="avatar-title">
+                                <img src="assets/images/avatar2.png" />
+                            </div>
+                            <span>Huỳnh Thị Mỹ Tiên</span>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="content">
+                                <a href="#">
+                                    <i class="bi bi-key"></i>
+                                    <label>Đổi mật khẩu</label>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <a href="#">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                    <label>Thoát</label>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <a href="#">
+                                    <i class="bi bi-plus"></i>
+                                    <label>Add</label>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <nav class="bg-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="/product.html">Quản lý sản phẩm</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Chi tiết</li>
+                </ol>
+            </nav>
+            <div class="title-header">
+                <strong>DANH SÁCH SẢN PHẨM</strong>
+            </div>
+            <a class="btn btn-addlist" href="#" role="button">+</a>
+            <table class="table table-bordered table-striped list-page">
+                <thead class="thead-dark">
+                    <tr>
+                        <th width="170">
+                            <i class="bi bi-image-fill"></i>
+                            Hình
+                        </th>
+                        <th>
+                            <i class="bi bi-newspaper"></i>
+                            Tiêu đề
+                        </th>
+                        <th>
+                            <i class="bi bi-newspaper"></i>
+                            Giá
+                        </th>
+                        <th>
+                            <i class="bi bi-person-circle"></i>
+                            Người đăng
+                        </th>
+                        <th width="120" class="text-center">
+                            <i class="bi bi-screwdriver"></i>
+                            Chức năng
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="avatar-container">
+                            <div class="avatar-box">
+                                <a class="close" href="#">
+                                    <i class="bi bi-x-circle-fill"></i>
+                                </a>
+                                <a data-fancybox="gallery" href="https://znews-photo.zadn.vn/Uploaded/neg_wpeczyr/2020_01_05/Apple_ra_mat_2_mau_iPhone_SE_2_1.jpg">
+                                    <img class="img-fluid img-preview" src="https://znews-photo.zadn.vn/Uploaded/neg_wpeczyr/2020_01_05/Apple_ra_mat_2_mau_iPhone_SE_2_1.jpg" />
+                                </a>
+                                <input type="file" class="img-upload form-control form-control-sm" />
+                            </div>
+                        </td>
+                        <td class="align-middle">
+                            <b>Huawei bị cấm cửa trên toàn cầu</b>
+                            <br />
+                            Mã số: <b>1</b>
+                            <br />
+                            Thể loại: <b>Hình ảnh</b>
+                        </td>
+                        <td class="align-middle">
+                            <span>79000đ</span>
+                        </td>
+                        <td class="align-middle">
+                            Admin
+                            <br />
+                            11/11/2019
+                            <br />
+                            06:00:00
+                        </td>
+                        <td class="align-middle">
+                            <a class="btn btn-info btn-sm btn-block" href="#">
+                                <i class="bi bi-eye-fill"></i>
+                                Xem
+                            </a>
+                            <a class="btn btn-primary btn-sm btn-block" href="#">
+                                <i class="bi bi-pencil-square"></i>
+                                Sửa
+                            </a>
+                            <a class="btn btn-warning btn-sm btn-block" href="#">
+                                <i class="bi bi-lock-fill"></i>
+                                Khóa
+                            </a>
+                            <a class="btn btn-danger btn-sm btn-block" href="#">
+                                <i class="bi bi-trash3-fill"></i>
+                                Xóa
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="avatar-container">
+                            <div class="avatar-box">
+                                <a class="close" href="#">
+                                    <i class="bi bi-x-circle-fill"></i>
+                                </a>
+                                <a data-fancybox="gallery" href="https://znews-photo.zadn.vn/Uploaded/ynssi/2020_01_05/Samsung_Galaxy_S11_Plus_Renders_OnLeaks_4.jpg">
+                                    <img class="img-fluid img-preview" src="https://znews-photo.zadn.vn/w480/Uploaded/ynssi/2020_01_05/Samsung_Galaxy_S11_Plus_Renders_OnLeaks_4.jpg" />
+                                </a>
+                                <input type="file" class="img-upload form-control form-control-sm" />
+                            </div>
+                        </td>
+                        <td class="align-middle">
+                            <b>Huawei bị cấm cửa trên toàn cầu</b>
+                            <br />
+                            Mã số: <b>1</b>
+                            <br />
+                            Thể loại: <b>Hình ảnh</b>
+                        </td>
+                        <td class="align-middle">
+                            <span>79000đ</span>
+                        </td>
+                        <td class="align-middle">
+                            Admin
+                            <br />
+                            11/11/2019
+                            <br />
+                            06:00:00
+                        </td>
+                        <td class="align-middle">
+                            <a class="btn btn-info btn-sm btn-block" href="#">
+                                <i class="bi bi-eye-fill"></i>
+                                Xem
+                            </a>
+                            <a class="btn btn-primary btn-sm btn-block" href="#">
+                                <i class="bi bi-pencil-square"></i>
+                                Sửa
+                            </a>
+                            <a class="btn btn-warning btn-sm btn-block" href="#">
+                                <i class="bi bi-lock-fill"></i>
+                                Khóa
+                            </a>
+                            <a class="btn btn-danger btn-sm btn-block" href="#">
+                                <i class="bi bi-trash3-fill"></i>
+                                Xóa
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="avatar-container">
+                            <div class="avatar-box">
+                                <a class="close" href="#">
+                                    <i class="bi bi-x-circle-fill"></i>
+                                </a>
+                                <a data-fancybox="gallery" href="https://znews-photo.zadn.vn/Uploaded/lce_jwquc/2020_01_04/Z05304012020_copy.jpg">
+                                    <img class="img-fluid img-preview" src="https://znews-photo.zadn.vn/w480/Uploaded/lce_jwquc/2020_01_04/Z05304012020_copy.jpg" />
+                                </a>
+                                <input type="file" class="img-upload form-control form-control-sm" />
+                            </div>
+                        </td>
+                        <td class="align-middle">
+                            <b>Huawei bị cấm cửa trên toàn cầu</b>
+                            <br />
+                            Mã số: <b>1</b>
+                            <br />
+                            Thể loại: <b>Hình ảnh</b>
+                        </td>
+                        <td class="align-middle">
+                            <span>79000đ</span>
+                        </td>
+                        <td class="align-middle">
+                            Admin
+                            <br />
+                            11/11/2019
+                            <br />
+                            06:00:00
+                        </td>
+                        <td class="align-middle">
+                            <a class="btn btn-info btn-sm btn-block" href="#">
+                                <i class="bi bi-eye-fill"></i>
+                                Xem
+                            </a>
+                            <a class="btn btn-primary btn-sm btn-block" href="#">
+                                <i class="bi bi-pencil-square"></i>
+                                Sửa
+                            </a>
+                            <a class="btn btn-warning btn-sm btn-block" href="#">
+                                <i class="bi bi-lock-fill"></i>
+                                Khóa
+                            </a>
+                            <a class="btn btn-danger btn-sm btn-block" href="#">
+                                <i class="bi bi-trash3-fill"></i>
+                                Xóa
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">
+                            <ul class="pagination pagination-sm justify-content-center mb-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">
+                                            <i class="bi bi-arrow-left-short"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">
+                                            <i class="bi bi-arrow-right-short"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-4 item">
+                    <ul>
+                        <li><h2>THÔNG TIN</h2></li>
+                        <li><a href="#">Cửa hàng thời trang nữ LilyShop</a></li>
+                        <li><a href="#">Đường D1 - Thuận An - Thuận Giao - Bình Dương</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 item">
+                    <ul>
+                        <li><h2>LIÊN HỆ</h2></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Trợ giúp</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 item">
+                    <ul>
+                        <li><h2>HỖ TRỢ KHÁCH HÀNG</h2></li>
+                        <li><a href="#">Hỏi đáp</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a> </li>
+                        <li> <a href="#">Đăng ký tài khoản</a></li>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả hoàn tiền</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                            <label>FACEBOOK</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                            <label>INSTAGRAM</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-messenger"></i>
+                            <label>MESSENGER</label>
+                        </a>
+                    </li>
+                </ul>
+                <span>Copyright &copy; 2022 LilyShop</span>
+            </div>
+        </div>
+    </footer>
+    <section>
+        <script src="assets/scripts/bootstrap.bundle.js"></script>
+        <script src="assets/scripts/jquery-3.6.1.js"></script>
+        <script src="assets/scripts/popper.js"></script>
+        <script src="assets/scripts/bootstrap.js"></script>
+        <script src="assets/scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="assets/scripts/jquery.nicescroll.js"></script>
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script src="assets/scripts/script.js"></script>
+    </section>
+</body>
+</html>
